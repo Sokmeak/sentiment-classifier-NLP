@@ -28,4 +28,5 @@ results/
 
 # Local env variables
 .env
+lib/
 
