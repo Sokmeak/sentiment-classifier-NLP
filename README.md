@@ -1,54 +1,73 @@
-Here is a simple `README.md` you can use:
-
-```md
 # Mini Project 2 – Text Classification (Sentiment Analysis)
 
 ## Overview
+
 This project builds a **sentiment classification** system for movie reviews.
 It predicts whether a review is:
+
 - **Positive (1)**
 - **Negative (0)**
 
 The project uses **feature engineering** (15 features) and trains two models using **scikit-learn**:
+
 - Logistic Regression
 - Random Forest
 
 ---
 
 ## Dataset Files
-Place these files inside the `data/` folder:
+
+The dataset files are located in the `dataset/` folder:
 
 - `positive-reviews.txt`
 - `negative-reviews.txt`
 - `positive-words.txt`
 - `negative-words.txt`
+- `challenge_data.txt`
 
 ---
 
 ## Project Structure
+
 ```
-
-mini_project_2/
-│── data/
-│── src/
-│   └── main.py
-│── results/
-│── requirements.txt
-│── .gitignore
+text-classification/
+├── dataset/
+│   ├── positive-reviews.txt
+│   ├── negative-reviews.txt
+│   ├── positive-words.txt
+│   ├── negative-words.txt
+│   └── challenge_data.txt
+├── src/
+│   ├── main.py
+│   ├── data_loader.py
+│   ├── tokenizer.py
+│   ├── feature_extractor.py
+│   ├── models.py
+│   ├── evaluator.py
+│   ├── challenge.py
+│   └── test-model.py
+├── results/
+│   ├── logistic_model.joblib
+│   ├── rf_model.joblib
+│   ├── tfidf_vectorizer.joblib
+│   ├── logistic_evaluation.txt
+│   └── rf_evaluation.txt
+├── requirements.txt
 └── README.md
-
-````
+```
 
 ---
 
 ## Installation (Local Machine)
+
 Create and activate a virtual environment:
 
 ### macOS / Linux
+
 ```bash
 python3 -m venv venv
 source venv/bin/activate
-````
+```
 
 ### Windows (PowerShell)
 
@@ -84,8 +103,8 @@ The program will:
 
 ## Models Used
 
-* **Logistic Regression**
-* **Random Forest (Decision Tree based)**
+- **Logistic Regression**
+- **Random Forest (Decision Tree based)**
 
 Both models are implemented using **scikit-learn**.
 
@@ -93,17 +112,11 @@ Both models are implemented using **scikit-learn**.
 
 ## Output
 
-Evaluation results will be printed in the terminal.
-(Optional) Saved models can be stored inside the `results/` folder.
+Evaluation results will be printed in the terminal and saved to the `results/` folder.
+Trained models are also saved as `.joblib` files for reuse.
 
 ---
 
 ## Author
 
 TEAM 7
-
-```
-
-If you want, I can update it with your **real folder names**, and add a section for **15 features list** inside the README too.
-```
-
